@@ -38,12 +38,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className='relative py-10'>
+      <div className='relative py-5 px-4 md:px-0 md:py-10'>
         {/* Search field */}
         <div className='search container mx-auto lg:px-2'>
-          <div className='flex flex-wrap items-center justify-between'>
+          <div className='flex flex-wrap flex-col md:flex-row items-center justify-between'>
             <input
-              className='p-3 rounded outline-none drop-shadow-lg w-1/3'
+              className='p-3 mb-4 md:mb-0 rounded outline-none drop-shadow-lg w-full md:w-1/3'
               type='text'
               placeholder='Apple Watch, Samsung S21...'
               value={query}
@@ -52,7 +52,7 @@ export default function Home() {
             {/* Dropdown */}
             <div
               onClick={() => setDropdownDisplay(!dropdownDisplay)}
-              className='relative p-3 cursor-pointer rounded drop-shadow-lg dropdown bg-white w-1/3'
+              className='relative p-3 cursor-pointer rounded drop-shadow-lg dropdown bg-white w-full md:w-1/3'
             >
               <div>
                 <button className='text-gray-400 inline-flex items-center justify-between w-full'>

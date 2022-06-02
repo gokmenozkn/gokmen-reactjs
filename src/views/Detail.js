@@ -24,8 +24,8 @@ export default function Detail() {
   return (
     <>
       <Navbar />
-      <main className='relative'>
-        <div className='max-w-5xl mx-auto py-7'>
+      <main className='relative px-4 md:px-0'>
+        <div className='max-w-5xl mx-auto py-4 md:py-7'>
           <div
             id='top'
             className='flex flex-wrap border-b-2 border-black py-3 mb-8 gap-7'
@@ -33,7 +33,7 @@ export default function Detail() {
             <img
               src={foundItem.avatar}
               alt=''
-              className='max-w-xs rounded-md bg-white'
+              className='w-full md:max-w-xs rounded-md bg-white'
             />
             <div className='flex flex-col py-5'>
               <h1 className='text-4xl font-bold'>{foundItem.name}</h1>
