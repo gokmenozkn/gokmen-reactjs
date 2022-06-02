@@ -7,6 +7,14 @@ export default function ProductList({ query, category }) {
   const dataToShow = (() => {
     if (!query && !category) {
       return products;
+    }
+
+    if (query && !category) {
+      return [...products].filter((p) =>
+        p.name.toLowerCase().includes(query.toLowerCase())
+      );
+    } else if (!query && category) {
+      return [...products].filter((p) => p.category === category);
     } else {
       return [...products].filter(
         (p) =>
